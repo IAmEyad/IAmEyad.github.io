@@ -1,7 +1,7 @@
 title: iameyad # The title of the blog
 author: Eyad Hasan # Your name 
 email: me@iameyad.dev # your email shown in the footer
-url: https://iameyad.github.io/ # this is your site's root address.
+url: iameyad.dev # this is your site's root address.
 description: > # this means to ignore newlines until "show_excerpts:"
   Personal Blog.
 favicon: "./favicon.ico" # set the favicon of the site 
