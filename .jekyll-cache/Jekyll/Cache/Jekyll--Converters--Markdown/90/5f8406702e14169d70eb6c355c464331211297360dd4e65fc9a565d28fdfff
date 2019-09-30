@@ -1,0 +1,29 @@
+I"Ÿ<h2 id="test-for-c">Test for C</h2>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define UNICODE
+#include &lt;windows.h&gt;
+</span> 
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1-20</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"Set Mouse Speed by Maverick</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+ 
+  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"Current speed: %2d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+ 
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed1</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed2</span><span class="p">);</span>
+ 
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// set speed to first value</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">speed</span> <span class="o">==</span> <span class="n">speed1</span> <span class="o">||</span> <span class="n">speed</span> <span class="o">==</span> <span class="n">speed2</span><span class="p">)</span> <span class="c1">// alternate</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span> <span class="o">+</span> <span class="n">speed2</span> <span class="o">-</span> <span class="n">speed</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>  <span class="c1">// start with first value</span>
+ 
+  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_SETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"New speed:     %2d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET
