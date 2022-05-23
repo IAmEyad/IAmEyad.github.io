@@ -2,7 +2,7 @@
 layout: post
 title: "Leetcode and me"
 categories: misc
-author: Eyad Hasam
+author: Eyad Hasan
 ---
 
 ## What is leetcode?
