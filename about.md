@@ -14,10 +14,6 @@ I'm Eyad (E-add), a 24 year old Software Engineer.  I enjoy creating new things,
 - Intern @ FireEye Summer 2018
     - Python, splunk
     - Data analytics
-- Instructor @ Mindframe Education Summer 2017 - Summer 2018
-    - Wrote python, iOS, java, cybersecurity, and robotics curriculum
-    - Coached FLL robotics
-
 
 
 
