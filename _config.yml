@@ -1,6 +1,6 @@
 title: iameyad # The title of the blog
 author: Eyad Hasan # Your name 
-email: me@iameyad.dev # your email shown in the footer
+email: # your email shown in the footer
 url: https://iameyad.dev # this is your site's root address.
 description: > # this means to ignore newlines until "show_excerpts:"
   Personal Blog.
