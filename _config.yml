@@ -18,7 +18,7 @@ moving:
 
   # generate social links in about page.
   social_links:
-    twitter: iameyad
+    #twitter: iameyad
     github:  iameyad
     #rss: RSS
     # dribbble: 
